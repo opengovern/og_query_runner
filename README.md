@@ -29,7 +29,7 @@
 ### Clone the repository
 
 ```bash
-git clone https://github.com/opengovern/slay-package.git
+git clone [https://github.com/opengovern/og_query_runner.git](https://github.com/opengovern/og_query_runner.git)
 ```
 
 ### Install the package
