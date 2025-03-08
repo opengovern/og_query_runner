@@ -31,7 +31,10 @@ def RunQuery(instance_url: str, query: str, api_key: str) -> Dict[str, Any]:
     try:
         response = requests.post(url, headers=headers, json=data)
         response.raise_for_status()  # Raise an exception for HTTP errors
-        return response.json()
+        final_response = response.json()
+        if ("title" in final_response):
+            del final_response["title"]
+        return final_response
     except requests.exceptions.RequestException as e:
         return {"error": str(e)}
 

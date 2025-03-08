@@ -63,16 +63,17 @@ RunQuery("SELECT * FROM table", "https://instance_url", "api_key")
 
 ```json
 {
-  "data": [
-    {
-      "column1": "value1",
-      "column2": "value2"
-    },
-    {
-      "column1": "value3",
-      "column2": "value4"
-    }
-  ]
+    "query": "SELECT * FROM table",
+    "headers": [
+        "column1",
+        "column2",
+    ],
+    "result": [
+        ["x","y"
+        ],
+        ["a","b"
+        ]
+    ]
 }
 ```
 
@@ -95,7 +96,17 @@ SaveQueryResults is a function that takes a query response and a file path as in
 
 ```python
 from og_query_runner import SaveQueryResults
-SaveQueryResults({"data": [{"column1": "value1", "column2": "value2"}, {"column1": "value3", "column2": "value4"}]}, "results.csv")
+SaveQueryResults({
+    "query": "SELECT * FROM table",
+    "headers": [
+        "column1",
+        "column2",
+    ],
+    "result": [
+        ["x","y"
+        ],
+        ["a","b"
+        ]
+    ]
+}, "results.csv")
 ```
-
-
