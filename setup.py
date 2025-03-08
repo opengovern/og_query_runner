@@ -15,7 +15,7 @@ setup(
     description="A package to run queries and save results on a given opencomply instance.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/opengovern/slay-package",  # If hosting on GitHub
+    url="https://github.com/opengovern/og_query_runner",
     license=open("LICENSE").read(),
     classifiers=[
         "Programming Language :: Python :: 3",
