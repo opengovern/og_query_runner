@@ -23,13 +23,14 @@
     - [Returns](#returns-3)
     - [Example](#example-3)
   - [Example File](#example-file)
+  - [License](#license)
 
 ## Installation
 
 ### Clone the repository
 
 ```bash
-git clone [https://github.com/opengovern/og_query_runner.git](https://github.com/opengovern/og_query_runner.git)
+git clone https://github.com/opengovern/og_query_runner.git
 ```
 
 ### Install the package
@@ -163,4 +164,6 @@ print(result)
 
 you can find an example file in the repository named [example.py](example.py) that demonstrates how to use the package.
 
+## License
 
+ see the [LICENSE](LICENSE) file for details.
