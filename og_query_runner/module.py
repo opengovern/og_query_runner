@@ -70,7 +70,7 @@ def SaveQueryResults(data: Dict[str, Union[List[str], List[List[Any]]]], file_pa
     
     try:
         df = pd.DataFrame(data["result"], columns=data["headers"])
-        df.to_csv(file_path, index=False)
+        df.to_csv(file_path+".csv", index=False)
         
         if query:
             with open(file_path + ".query", "w") as query_file:
