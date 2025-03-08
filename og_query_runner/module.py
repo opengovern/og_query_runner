@@ -35,16 +35,16 @@ def RunQuery(instance_url: str, query: str, api_key: str) -> Dict[str, Any]:
     except requests.exceptions.RequestException as e:
         return {"error": str(e)}
 
-def SaveQueryResults(data: list, filename: str) -> None:
+def SaveQueryResults(data: list, file_path: str) -> None:
     """
     Saves query results to a CSV file.
 
     Args:
         data (list): The query result data, expected to be a list of dictionaries.
-        filename (str): The filename where the results will be saved.
+        file_path (str): The filename where the results will be saved.
 
     Returns:
         None
     """
     df = pd.DataFrame(data)
-    df.to_csv(filename, index=False)
+    df.to_csv(file_path, index=False)
