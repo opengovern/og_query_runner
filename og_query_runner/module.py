@@ -109,7 +109,7 @@ def ReadQueryFromFile(file_path: str) -> Dict[str, Optional[Union[List[str], Lis
         raise ValueError("Invalid file_path. It must be a non-empty string.")
     
     try:
-        df = pd.read_csv(file_path)
+        df = pd.read_csv(file_path+".csv")
         result = {
             "headers": df.columns.tolist(),
             "result": df.values.tolist()
